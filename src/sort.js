@@ -18,7 +18,6 @@ const sort = R.curry((packageName, end) => {
         const repoUrl = `https://github.com` + $('a[data-hovercard-type="repository"]', el).attr('href')
 
         const inner = $('div[class="d-flex flex-auto flex-justify-end"]', el).text()
-        console.log(inner)
 
         const stars = Number.parseInt(inner.trim())
         const forks = 0
@@ -29,7 +28,7 @@ const sort = R.curry((packageName, end) => {
         // S.log(`aLog`, aLog)
       })
     } catch (e) {
-      console.error(e)
+      console.log('error loading next results')
     }
   }, end)
 

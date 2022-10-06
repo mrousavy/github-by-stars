@@ -6,12 +6,11 @@ import { isMainThread } from 'worker_threads';
 const result = dotenv.config()
 
 const packageAuthor = argv.author || `mrousavy`
-const packageName = argv.name || `react-native-mmkv`
-const begin = argv.begin || 0
-const end = argv.end || 100
+const packageName = argv.name || `react-native-multithreading`
 
 const main = async () => {
-  await getHtmls(result)(packageAuthor)(packageName)(begin)(end)
+  const end = await getHtmls(result, packageAuthor, packageName, 0)
+  console.log(`End: ` + end)
   sort(packageName)(end)
 }
 
