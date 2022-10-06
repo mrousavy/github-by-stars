@@ -5,8 +5,8 @@ import dotenv from 'dotenv'
 import { isMainThread } from 'worker_threads';
 const result = dotenv.config()
 
-const packageAuthor = argv.author || `ramda`
-const packageName = argv.name || `ramda`
+const packageAuthor = argv.author || `mrousavy`
+const packageName = argv.name || `react-native-mmkv`
 const begin = argv.begin || 0
 const end = argv.end || 100
 
