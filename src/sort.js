@@ -36,7 +36,7 @@ const sort = R.curry((packageName, end) => {
     R.uniq,
     R.sortBy(R.prop(`stars`)),
     R.reverse,
-    R.slice(0, 10),
+    R.slice(0, 50),
     util.inspect,
   )(objs)
 
